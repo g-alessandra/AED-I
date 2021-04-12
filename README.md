@@ -20,3 +20,14 @@ Faça uma agenda capaz de incluir, apagar, buscar e listar quantas pessoas o usu
 Não pergunte para o usuário quantas pessoas ele vai incluir. 
 Não pode alocar espaço para mais pessoas do que o necessário. 
 Cada pessoa tem nome[10], idade e telefone.
+
+## Questão 5
+Faça um programa que armazene a informação de várias pessoas (nome, idade e altura). 
+O programa só deve sair quando o usuário não desejar mais entrar com os dados de outra pessoa. 
+Antes de sair o programa deve apresentar, de forma organizada, os dados de todas as pessoas.
+
+## Questão 7
+Inverso da questão 3.
+O programa deve armazenar no máximo 10 pessoas.
+Todas as variáveis que forem usados no programa deve ser ponteiros. Exceto a variável global Pessoas pessoas[10].
+Os ponteiros devem apontar para um buffer, chamado pBuffer onde os dados devem ser armazenados.
