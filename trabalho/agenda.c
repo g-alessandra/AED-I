@@ -77,6 +77,8 @@ void apagar(Controle *pBuffer){//remove o usuario de acordo com o nome solicitad
                 if(pBuffer->contador == 1){ //se eh o unico elemento
                     pBuffer->inicio = NULL;
                     pBuffer->fim = NULL;
+                    free(pBuffer->percorrer);
+
                 }
                 else{
                     if(pBuffer->percorrer == pBuffer->inicio){ //se eh o primeiro
@@ -84,6 +86,8 @@ void apagar(Controle *pBuffer){//remove o usuario de acordo com o nome solicitad
                         pBuffer->percorrer->anterior = NULL;
                         
                         pBuffer->inicio = pBuffer->percorrer; 
+                        free(pBuffer->percorrer);
+
                     }
                     else{
                         if(pBuffer->percorrer == pBuffer->fim){ //eh o ultimo
@@ -91,17 +95,19 @@ void apagar(Controle *pBuffer){//remove o usuario de acordo com o nome solicitad
                             pBuffer->percorrer->prox = NULL;
                             
                             pBuffer->fim = pBuffer->percorrer;
+                            free(pBuffer->percorrer);
+
                         }
                         else{ //ta no meio
                             pBuffer->aux = pBuffer->percorrer->anterior; 
                             pBuffer->aux->prox = pBuffer->percorrer->prox; 
                             pBuffer->aux2 = pBuffer->percorrer->prox; 
                             pBuffer->aux2->anterior = pBuffer->percorrer->anterior;
+                            free(pBuffer->percorrer);
                         }
                     }
                 }
 
-                free(pBuffer->percorrer);
                 pBuffer->encontrar = 1; 
                 pBuffer->contador -= 1; 
                 pBuffer->i = pBuffer->contador; //completa condição do for, sai do loop
