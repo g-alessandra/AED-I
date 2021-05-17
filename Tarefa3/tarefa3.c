@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <time.h>
 
-
 typedef struct Nodo{ 
     int conteudo;
     struct Nodo *esq, *dir;
@@ -400,5 +399,5 @@ int main(){
     
     }while(getchar());
     
-    exit (0);
+    exit(0);
 }
