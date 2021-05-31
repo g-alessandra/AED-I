@@ -4,7 +4,7 @@
 #include <sys/time.h>
 
 void Insere(int *vetor,int tam){
-    srand(time(0));
+    srand(time(NULL));
     for(int i = 0; i < tam; i++){
         vetor[i] = rand()%1000;
     }
